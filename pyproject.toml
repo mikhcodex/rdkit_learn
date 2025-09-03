@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cheminf-scaffold-kit"
+version = "0.0.1"
+description = "Scaffold/substructure Bayes yes/no + similarity pipeline with ~1000+ background molecules"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "MarMikh"}]
+license = {text = "MIT"}
+dependencies = [
+  "pandas",
+  "rdkit",
+  "chembl_webresource_client",
+  "requests",
+  "icecream"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cheminf_kit"]
